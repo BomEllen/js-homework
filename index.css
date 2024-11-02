@@ -1,0 +1,61 @@
+@import "./../../common/modern-reset.css";
+@import "./../../common/base.css";
+@font-face {
+  font-family: "KimjungchulMyungjo-Bold";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/KimjungchulMyungjo-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  --body-background: #fdfdea;
+  --container-background: #FFEEA9;
+  --container-border: #FFBF78;
+}
+
+body {
+  margin: 1.25rem;
+  background-color: var(--body-background);
+  font-family: KimjungchulMyungjo-Bold;
+}
+
+h1{
+  text-align: center;
+}
+
+h2 {
+  margin-block-end: 1.875rem;
+  color: #ff8800;
+  text-align: center;
+}
+
+ul {
+  list-style: decimal;
+}
+
+a {
+  text-decoration-line: none;
+  color: black;
+}
+
+li {
+  line-height: 1.875rem;
+}
+
+li:hover {
+  transform: scale(1.03);
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  
+}
+
+.inside-container {
+  width: 20rem;
+  height: 80vh;
+  background-color: var(--container-background);
+  border: 4px dashed var(--container-border);
+  border-radius: 20px;
+}
