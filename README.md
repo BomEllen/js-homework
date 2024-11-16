@@ -15,6 +15,7 @@
 ## ✅ 과제 링크
 
 - [Mission-01](https://github.com/BomEllen/js-homework/blob/main/mission01/md/README.md)
+- [Mission-02](https://github.com/BomEllen/js-homework/blob/main/mission01/md/README.md)
 
 </br>
 </br>
