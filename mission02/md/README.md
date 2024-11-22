@@ -7,6 +7,7 @@
 
 **설명:** 로그인 페이지에서 user가 id와 password를 입력했을 때 미리 설정해둔 id/pw와 일치하는 값을 입력한 경우 'welcome' 페이지로 이동하는 코드 로직을 작성하세요.
 
+<br/>
 
 ### 요구사항
 
@@ -40,7 +41,7 @@ value === user.pw
 ```html
 window.location.href = 'welcome.html'
 ```
-
+<br/>
 
 ### 1. 코드 구조 생각해보기
 
@@ -57,8 +58,11 @@ window.location.href = 'welcome.html'
 ```
 그런 후에는 조금 더 구체적으로 작성해야하는 코드 구조를 생각해보았고, 위 생각을 토대로 일단 html에서 id와 pw 값을 가져오는 것 부터 시작하였다.
 
+<br/>
 
 ### 2. 코드 작성하기
+
+<br/>
 
 **(1) id와 pw 값 받아오기**
 
@@ -81,16 +85,28 @@ function login(event) {
 form.addEventListener("submit", login);
 ```
 
-**- HTML에서 form 요소 선택하기**
+**- HTML에서 form 요소 선택하기** <br/>
+
 `const form = document.querySelector("form");`
-`querySelector`를 이용하여 html의 `<form>`요소를 받아왔다.
+`querySelector`를 이용하여 html의 `<form>`요소를 받아왔다. 
 
-**- login함수 실행하기**
+<br/>
+
+
+**- login함수 실행하기**  <br/>
+
 `form.addEventListener("submit", login);`
-`addEventListener`를 이용하여 form에서 제출 이벤트가 일어날 때 마다 즉, user가 id/pw를 입력할 때 마다 login 함수를 실행하도록 하였다.
+`addEventListener`를 이용하여 form에서 제출 이벤트가 일어날 때 마다 즉, user가 id/pw를 입력할 때 마다 login 함수를 실행하도록 하였다. 
 
-**- id/pw 받아오기**
-form이 제출 된 후 `login`함수는 실행되고, `event`객체를 인자로 받게 된다. `event`객체에는 이벤트 리스너 함수에 의해 자동으로 전달되는 객체로 클릭, 키 입력, 마우스 이동, 폼 제출 등의 정보를 담고있다.
+<br/>
+
+
+**- id/pw 받아오기**  <br/>
+
+form이 제출 된 후 `login`함수는 실행되고, `event`객체를 인자로 받게 된다. `event`객체에는 이벤트 리스너 함수에 의해 자동으로 전달되는 객체로 클릭, 키 입력, 마우스 이동, 폼 제출 등의 정보를 담고있다. 
+
+<br/>
+
 
 ```html
 const getId = form.querySelector('[name="userEmail"]').value;
@@ -98,9 +114,14 @@ const getPw = form.querySelector('[name="userPassword"]').value;
 ```
 위 코드를 통해 user가 입력한 id값과 pw값을 변수에 선언 및 할당해주었다.
 
+<br/>
+<br/>
+
 그 후 `console.log(getId);`와 `console.log(getPw);`를 통해 아래 이미지와 같이 값이 잘 불러와지는 것을 확인하였다.
 
 <img src="./../md/images/console.png" width="750px" height="400px"/>
+
+<br/>
 
 **- 페이지 새로고침 에러**
 위의 `login` 함수에서 `event.preventDefault();`코드를 작성해주지 않으면 user가 폼을 제출하였을 때 새로고침이 일어나 '페이지를 찾을 수 없습니다' 오류가 발생하기 때문에 이벤트가 일어나도 새로고침을 하지 않도록 해당 코드를 넣어주었다.
@@ -161,14 +182,15 @@ function movePage(pageUrl) {
 ```
 코드는 위와 같이 `pageUrl`을 매개변수로 받아서 해당 페이지로 이동할 수 있는 함수로 만들었다.
 
-
-
+<br/>
+<br/>
 
 
 ## 결과 화면
 ![과제2번 실행 결과](./../md/images/login_result.gif)
 
-
+<br/>
+<br/>
 
 ## 느낀점
 우선 try/catch문을 꼭 사용하고 싶었는데 사용하지 못한것이 아쉬웠고, validation을 제대로 하지 못한점 또한 아쉬웠다.
@@ -181,6 +203,7 @@ function movePage(pageUrl) {
 그래도 여전히 과제를 처음 만나면 무엇 부터 시작해야할지 막막한 감이 있는데, 이는 많은 연습을 통해 극복하는 것 이라고 해서 열심히.. 과제도 하며 많은 연습을 해보아야겠다.
 
 얼른 validation을 어떻게 하면 좋을지 알고싶다ㅎㅎ
+
 
 
 
