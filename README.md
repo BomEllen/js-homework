@@ -16,6 +16,7 @@
 
 - [Mission-01](https://github.com/BomEllen/js-homework/blob/main/mission01/md/README.md)
 - [Mission-02](https://github.com/BomEllen/js-homework/tree/main/mission02/md)
+- [Mission-03](https://github.com/BomEllen/js-homework/tree/main/mission03/client/md)
 
 </br>
 </br>
